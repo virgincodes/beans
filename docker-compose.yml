@@ -1,0 +1,14 @@
+version: "2"
+services:
+  app:
+    build: .
+    ports:
+    - "7777:7777"
+    depends_on:
+    - mongo
+    volumes:
+      - ./:/app
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"

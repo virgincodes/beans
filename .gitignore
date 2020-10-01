@@ -1,0 +1,11 @@
+logs
+*.log
+.idea
+pids
+*.pid
+*.seed
+.DS_STORE
+lib-cov
+node_modules
+.lock-wscript
+.env

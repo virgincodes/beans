@@ -1,0 +1,41 @@
+{
+  "name": "jwt-kit",
+  "main": "api.js",
+  "scripts": {
+    "start": "./node_modules/forever/bin/forever -c 'node --harmony' --watch --watchDirectory ./app app.js",
+    "production": "NODE_ENV=production ./node_modules/forever/bin/forever start api.js",
+    "test": "PORT=3001 NODE_ENV=TEST mocha"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "axios": "^0.19.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.3",
+    "cordova": "^10.0.0",
+    "cors": "^2.8.5",
+    "crypto-random-string": "^3.2.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.16.4",
+    "express-list-endpoints": "^4.0.1",
+    "express-session": "^1.17.1",
+    "forever": "^0.15.3",
+    "g": "^2.0.1",
+    "ionic": "^5.4.16",
+    "jsonwebtoken": "^5.7.0",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^4.13.20",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.4.10",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "paystack": "^2.0.1",
+    "paystack-node": "^0.2.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "expect": "^1.20.2",
+    "mocha": "^2.5.3"
+  }
+}
