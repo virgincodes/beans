@@ -25,10 +25,11 @@ const saveALog = async ( req,res ) =>{
 const getLogs = async ( req,res ) =>{
     
     //get the size of what i need and also the pagination
-    const {size,pagination = 0,type} = req.query
+    const {size,pagination = 0,type} = req.params
     const skip = pagination * size
+     
     try {
-      const data =   await Model.find({}).skip(skip).limit(size)
+      const data =   await Model.find({}).skip(parseInt(skip)).limit(parseInt(size));
       return res.json({
             success:true,
             data
